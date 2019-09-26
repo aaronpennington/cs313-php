@@ -6,29 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Week 02</title>
-  <style>
-  #div1 {
-    background-color: lightblue;
-  }
-
-  #div2 {
-    background-color: yellow;
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <h1> PHP TEST </h1>
-  <?php for ($i = 0; $i < 10; $i++) { ?>
-  <div id="<?php 
-    if ($i % 2 == 0) {
-    echo "div1";
-    }
-    else {
-      echo "div2";
-    } ?>">
-    <?php echo "DIV $i HERE!";} 
-    ?>
+<div><<button type="button" name="1">Click Me</button> </div>
+<div><<button type="button" name="2">Click Me</button> </div>
+<div><<button type="button" name="3">Click Me</button> </div>
+
+<script src="scripts.js"></script>
 </body>
 
 </html>
