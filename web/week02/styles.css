@@ -1,3 +1,12 @@
 body {
   
 }
+
+div:hover {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+#b1 {
+  background-color: blue
+
+}
