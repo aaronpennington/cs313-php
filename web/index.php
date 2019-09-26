@@ -10,8 +10,8 @@
 
 <body>
   <ul>
-    <li><a href="web/week01/hello.html">Week 01</a></li>
-    <li><a href="web/week02/index.php">Week 02</a></li>
+    <li><a href="week01/hello.html">Week 01</a></li>
+    <li><a href="week02/index.php">Week 02</a></li>
   </ul>
 </body>
 
