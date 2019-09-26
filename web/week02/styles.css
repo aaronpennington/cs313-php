@@ -7,19 +7,19 @@ button:hover {
   font-weight: bold;
 }
 #b1 {
-  background-color: blue;
+  background-color: rgb(255,3,3) /*red*/;
   font-size: 12px;
 
 }
 
 #b2 {
-  background-color: green;
+  background-color: rgb(3,255,255) /*blue*/;
   font-size: 30px;
 
 }
 
 #b3 {
-  background-color: purple;
+  background-color: rgb(129,255,3) /*green*/;
   font-size: 20px;
 
 }
