@@ -1,12 +1,25 @@
 body {
-  
+ background-color: gray;
 }
 
-div:hover {
+button:hover {
   text-transform: capitalize;
   font-weight: bold;
 }
 #b1 {
-  background-color: blue
+  background-color: blue;
+  font-size: 12px;
+
+}
+
+#b2 {
+  background-color: green;
+  font-size: 30px;
+
+}
+
+#b3 {
+  background-color: purple;
+  font-size: 20px;
 
 }

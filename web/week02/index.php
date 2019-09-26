@@ -14,7 +14,8 @@
 <div><button type="button" name="2" id="b2" onclick="buttonPress()">Click Me</button> </div>
 <div><button type="button" name="3" id="b3" onclick="buttonPress()">Click Me</button> </div>
 
-Change color: <input type="text" name="ChangeColor" value=""><br>
+Change color: <input type="text" id="colorText" name="ChangeColor" value="">
+<button type="button" name="changeColorBtn" id="changeColorBtn" onclick="changeColor()">Change color</button><br>
 
 <script src="scripts.js"></script>
 </body>
