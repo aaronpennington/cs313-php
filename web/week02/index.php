@@ -10,9 +10,11 @@
 </head>
 
 <body>
-<div><<button type="button" name="1">Click Me</button> </div>
-<div><<button type="button" name="2">Click Me</button> </div>
-<div><<button type="button" name="3">Click Me</button> </div>
+<div><button type="button" name="1" id="b1" onclick="buttonPress()">Click Me</button> </div>
+<div><button type="button" name="2" id="b2" onclick="buttonPress()">Click Me</button> </div>
+<div><button type="button" name="3" id="b3" onclick="buttonPress()">Click Me</button> </div>
+
+Change color: <input type="text" name="ChangeColor" value=""><br>
 
 <script src="scripts.js"></script>
 </body>
