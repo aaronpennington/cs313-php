@@ -1,3 +1,5 @@
+-- There should be a One-to-Many relation between users and posts
+-- and users and comments.
 
 CREATE TABLE public.user
 (
@@ -15,7 +17,9 @@ CREATE TABLE public.post
   user_id INT NOT NULL REFERENCES public.user(id)
 );
 
--- Note that this table includes a foreign key
+-- It would also be advantageous to have a heirarchy of 
+-- comments (allow for nested comment chains). 
+
 CREATE TABLE public.comment
 (
   id SERIAL NOT NULL PRIMARY KEY,
