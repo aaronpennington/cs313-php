@@ -22,16 +22,44 @@
     <h1>Susan Bush</h1>
     <p>Susan is a teacher for VIPKids!</p>
   </div>
-  <p> Select all posts from a user: </p>
-  <select>
-    <option>User</option>
-    <?php 
-      foreach ($db->query('SELECT public.user.display_name AS display_name FROM public.USER;') as $row)
+
+  <?php
+    if(isset($_POST['formSubmit'])) 
+    {
+      $users = $_POST['formUsers'];
+      
+      if(!isset($users)) 
       {
-        echo '<option>' . $row['display_name'] . '</option>';
+        echo("<p>You didn't select any users!</p>\n");
+      } 
+      else 
+      {
+        $nUsers = count($users);
+        
+        echo("<p>You selected $nUsers countries: ");
+        for($i=0; $i < $nUsers; $i++)
+        {
+          echo($users[$i] . " ");
+        }
+        echo("</p>");
+      }
+    }
+  ?>
+
+  <p> Select all posts from a user: </p>
+  <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+    <select name="formUsers[]">
+      <option>User</option>
+      <?php 
+      foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.username AS user_name FROM public.USER;') as $row)
+      {
+        echo '<option value="'. $row['user_name'] . '">' . $row['display_name'] . '</option>';
       }
     ?>
-  </select>
+    </select>
+    <input type="submit" name="formSubmit" value="Submit">
+  </form>
+
   <?php 
     foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = public.POST.USER_ID ORDER BY public.post.post_date;')
   as $row)
