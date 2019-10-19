@@ -6,5 +6,6 @@ function submitFormData() {
     },
     function (data) {
       $('#posts').html(data);
+      console.log(data);
     });
 }
