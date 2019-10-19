@@ -1,6 +1,7 @@
 <?php
+  include "db.php";
   $user_id = $_POST['user_id'];
-  echo $user_id;
+  echo "User ID: " . $user_id;
   foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = 4 AND public.POST.USER_ID = 4 ORDER BY public.post.post_date;') as $row)
   {
     echo '<h2>' . $row['title'] . '</h2>';
