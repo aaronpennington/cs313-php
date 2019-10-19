@@ -12,7 +12,15 @@
 
 <body>
   <?php 
-    foreach ($db->query('SELECT content, post_date FROM public.post') as $row)
+  
+    foreach ($db->query('SELECT public.user.name AS "User Name",
+                        public.post.content AS "Post Content",
+                        public.post.post_date AS "Post Date",
+                        FROM public.USER,
+                        public.POST,
+                        WHERE public.USER.ID = public.POST.USER_ID
+                        ORDER BY public.user.name;')
+  as $row)
     {
       echo '<h2>' . $row['post_date'] . '</h2>';
       echo '<h2>' . $row['content'] . '</h2>';
