@@ -23,7 +23,7 @@
     <p>Susan is a teacher for VIPKids!</p>
   </div>
   <?php 
-    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.POST.USER_ID = 4 ORDER BY public.user.username;')
+    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = public.POST.USER_ID ORDER BY public.post.post_date;')
   as $row)
     {
       echo '<h2>' . $row['title'] . '</h2>';
