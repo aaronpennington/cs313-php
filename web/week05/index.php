@@ -26,22 +26,10 @@
   <?php
     if(isset($_POST['formSubmit'])) 
     {
-      $users = $_POST['formUsers'];
-      
+      $user = $_POST['formUsers'];
       if(!isset($users)) 
       {
         echo("<p>You didn't select any users!</p>\n");
-      } 
-      else 
-      {
-        $nUsers = count($users);
-        
-        echo("<p>You selected $nUsers countries: ");
-        for($i=0; $i < $nUsers; $i++)
-        {
-          echo($users[$i] . " ");
-        }
-        echo("</p>");
       }
     }
   ?>
@@ -51,9 +39,9 @@
     <select name="formUsers[]">
       <option>User</option>
       <?php 
-      foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.username AS user_name FROM public.USER;') as $row)
+      foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.id AS user_id FROM public.USER;') as $row)
       {
-        echo '<option value="'. $row['user_name'] . '">' . $row['display_name'] . '</option>';
+        echo '<option value="'. $row['user_id'] . '">' . $row['display_name'] . '</option>';
       }
     ?>
     </select>
@@ -61,7 +49,7 @@
   </form>
 
   <?php 
-    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = public.POST.USER_ID ORDER BY public.post.post_date;')
+    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = ' . $user . ' AND public.post.user_id = ' . $user . '  ORDER BY public.post.post_date;')
   as $row)
     {
       echo '<h2>' . $row['title'] . '</h2>';
