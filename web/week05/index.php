@@ -28,7 +28,7 @@
     <?php 
       foreach ($db->query('SELECT public.user.display_name AS display_name FROM public.USER;') as $row)
       {
-        echo '<option>' . $row['display_name'] . '</select>';
+        echo '<option>' . $row['display_name'] . '</option>';
       }
     ?>
   </select>
