@@ -12,15 +12,7 @@
 
 <body>
   <?php 
-  
-    foreach ($db->query('SELECT public.user.name AS user_name,
-                        public.user.display_name AS display_name,
-                        public.post.content AS content,
-                        public.post.post_date AS post_date,
-                        FROM public.USER,
-                        public.POST,
-                        WHERE public.USER.ID = public.POST.USER_ID
-                        ORDER BY public.user.name;')
+    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = public.POST.USER_ID ORDER BY public.user.username;')
   as $row)
     {
       echo '<h2>' . $row['post_date'] . ' - ' . $row['display_name'] . '</h2>';
