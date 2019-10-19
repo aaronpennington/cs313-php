@@ -23,23 +23,9 @@
     <p>Susan is a teacher for VIPKids!</p>
   </div>
 
-  <?php
-    if(isset($_POST['formSubmit'])) 
-    {
-      $user = $_POST['formUsers'];
-      if(!isset($users)) 
-      {
-        echo("<p>You didn't select any users!</p>\n");
-      }
-      else {
-        echo $user;
-      }
-    }
-  ?>
-
   <p> Select all posts from a user: </p>
-  <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
-    <select name="formUsers[]">
+  <form id="userSelectForm" method="post">
+    <select id="userList" onchange="submitFormData()">
       <option>User</option>
       <?php 
       foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.id AS user_id FROM public.USER;') as $row)
@@ -48,19 +34,19 @@
       }
     ?>
     </select>
-    <input type="submit" name="formSubmit" value="Submit">
   </form>
 
-  <?php 
-    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = ' . $user . ' AND public.POST.USER_ID = ' . $user . '  ORDER BY public.post.post_date;')
-  as $row)
+  <div id="posts">
+    <?php 
+    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = ' . $user . ' AND public.POST.USER_ID = ' . $user . '  ORDER BY public.post.post_date;') as $row)
     {
       echo '<h2>' . $row['title'] . '</h2>';
       echo '<h4>' . $row['subtitle'] . '</h4>';
       echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
       echo '<hr><br/>';
     }
-  ?>
+    ?>
+  </div>
 </body>
 
 </html>
