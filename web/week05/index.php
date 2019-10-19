@@ -27,8 +27,8 @@
   as $row)
     {
       echo '<h2>' . $row['title'] . '</h2>';
-      echo '<h3>' . $row['subtitle'] . '</h3>';
-      echo '<h4> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h4>';
+      echo '<h4>' . $row['subtitle'] . '</h4>';
+      echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
       echo '<hr><br/>';
     }
   ?>
