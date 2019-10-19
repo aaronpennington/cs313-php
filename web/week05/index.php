@@ -12,6 +12,21 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="scripts.js"></script>
+  <script>
+  function submitFormData() {
+    let user_id = $("#userList").val();
+    console.log("USER ID: " + user_id);
+
+    $.post("submit.php", {
+        user_id: user_id
+      },
+      function(data) {
+        $('#posts').html(data);
+        console.log(data);
+      });
+  }
+  </script>
+
   <title>Susan Bush's Blog</title>
 </head>
 
