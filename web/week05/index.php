@@ -24,8 +24,8 @@
   </div>
 
   <p> Select all posts from a user: </p>
-  <form id="userSelectForm" method="post">
-    <select id="userList" onchange="submitFormData()">
+  <form id="userSelectForm" onchange="submitFormData()" method="post">
+    <select id="userList">
       <option>User</option>
       <?php 
       foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.id AS user_id FROM public.USER;') as $row)
