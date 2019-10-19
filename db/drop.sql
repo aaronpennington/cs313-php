@@ -1,0 +1,3 @@
+DROP TABLE public.COMMENT;
+DROP TABLE public.POST;
+DROP TABLE public.USER;
