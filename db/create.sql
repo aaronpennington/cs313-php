@@ -8,6 +8,8 @@ CREATE TABLE public.user (
 
 CREATE TABLE public.post (
   id SERIAL NOT NULL PRIMARY KEY, 
+  title TEXT NOT NULL,
+  subtitle TEXT,
   content TEXT NOT NULL, 
   post_date DATE NOT NULL, 
   user_id INT NOT NULL REFERENCES public.user(id)); 
