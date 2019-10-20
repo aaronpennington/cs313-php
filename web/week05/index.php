@@ -12,21 +12,6 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="scripts.js"></script>
-  <script>
-  function submitFormData() {
-    let user_id = $("#userList").val();
-    console.log("USER ID: " + user_id);
-
-    $.post("submit.php", {
-        user_id: user_id
-      },
-      function(data) {
-        $('#posts').html(data);
-        console.log(data);
-      });
-  }
-  </script>
-
   <title>Susan Bush's Blog</title>
 </head>
 
@@ -52,15 +37,6 @@
   </form>
 
   <div id="posts">
-    <!-- <--?php 
-    // foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = ' . $user . ' AND public.POST.USER_ID = ' . $user . '  ORDER BY public.post.post_date;') as $row)
-    // {
-    //   echo '<h2>' . $row['title'] . '</h2>';
-    //   echo '<h4>' . $row['subtitle'] . '</h4>';
-    //   echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
-    //   echo '<hr><br/>';
-    // }
-    ?> -->
   </div>
 </body>
 
