@@ -18,12 +18,12 @@
 <?php include "db.php"; ?>
 
 <body>
-  <div class="jumbotron">
-    <h1>Susan Bush</h1>
-    <p>Susan is a teacher for VIPKids!</p>
-  </div>
-  <div class="navbar">
-  </div>
+  <header class="masthead container">
+    <div class="jumbotron">
+      <h1>Susan Bush</h1>
+      <p>Susan is a teacher for VIP Kids</p>
+    </div>
+  </header>
 
   <div id="nav">
     <div class="navbar navbar-inverse navbar-static-top">
