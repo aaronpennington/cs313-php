@@ -37,14 +37,17 @@
     </div>
 
     <div id="recentPost">
+      <h1>Most Recent Post</h1>
       <?php 
-        foreach ($db->query('SELECT public.POST.title AS title, public.POST.subtitle AS subtitle, public.POST.content as content, public.POST.post_date AS post_date, public.USER.display_name AS display_name FROM public.POST ORDER BY public.POST.id DESC LIMIT 1;') as $row)
-        {
-          echo '<h1>' . $row['title'] . '</h2>';
-          echo '<h3>' . $row['subtitle'] . '</h3>';
-          echo '<p>' . $row['content'] . '</p>';
-          echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
-        }
+        $result = $db->query('SELECT public.POST.title AS title, public.POST.subtitle AS subtitle, public.POST.content as content, public.POST.post_date AS post_date, public.USER.display_name AS display_name FROM public.POST, public.USER WHERE public.POST.user_id = public.USER.id ORDER BY public.POST.id DESC;');
+        
+        $row = pg_fetch_assoc($result);
+
+        echo '<h1>' . $row['title'] . '</h2>';
+        echo '<h3>' . $row['subtitle'] . '</h3>';
+        echo '<p>' . $row['content'] . '</p>';
+        echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
+        
       ?>
     </div>
   </div>
