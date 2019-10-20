@@ -56,20 +56,22 @@
     </div><!-- /.navbar -->
   </div>
 
-  <p> Select all posts from a user: </p>
-  <form id="userSelectForm" onchange="submitFormData()" method="post">
-    <select id="userList">
-      <option value="default">User</option>
-      <?php 
+  <div class="container">
+    <p> Select all posts from a user: </p>
+    <form id="userSelectForm" onchange="submitFormData()" method="post">
+      <select id="userList">
+        <option value="default">User</option>
+        <?php 
       foreach ($db->query('SELECT public.user.display_name AS display_name, public.user.id AS user_id FROM public.USER;') as $row)
       {
         echo '<option value="'. $row['user_id'] . '">' . $row['display_name'] . '</option>';
       }
     ?>
-    </select>
-  </form>
+      </select>
+    </form>
 
-  <div id="posts">
+    <div id="posts">
+    </div>
   </div>
 </body>
 
