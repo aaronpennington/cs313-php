@@ -8,9 +8,3 @@ function submitFormData() {
       $('#posts').html(data);
     });
 }
-
-// $('#nav').affix({
-//   offset: {
-//     top: $('header').height()
-//   }
-// });
