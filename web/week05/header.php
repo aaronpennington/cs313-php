@@ -6,7 +6,7 @@
 
   <div id="nav">
     <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
+      <div class="nContainer">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <a href="index.php" class="navbar-brand">Home</a>
         <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
