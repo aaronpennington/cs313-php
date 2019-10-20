@@ -7,7 +7,7 @@
   <div class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <a href="#" class="navbar-brand">Brand</a>
+      <a href="index.php" class="navbar-brand">Home</a>
       <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -15,8 +15,8 @@
       </a>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">All Posts</a></li>
         </ul>
         <ul class="nav pull-right navbar-nav">
           <li>
