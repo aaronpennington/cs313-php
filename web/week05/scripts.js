@@ -9,8 +9,8 @@ function submitFormData() {
     });
 }
 
-$('#nav').affix({
-  offset: {
-    top: $('header').height()
-  }
-});
+// $('#nav').affix({
+//   offset: {
+//     top: $('header').height()
+//   }
+// });
