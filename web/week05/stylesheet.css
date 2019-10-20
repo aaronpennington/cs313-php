@@ -5,14 +5,14 @@
   width: auto;
 }
 
-.navbar {
+header {
   height: 280px;
   background-color: #eee;
 }
 
 #nav.affix {
   position: fixed;
-  top: 0;
+  top: -10;
   width: 100%;
   z-index: 10;
 }
