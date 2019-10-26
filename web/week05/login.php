@@ -9,15 +9,15 @@ include "../includes/links.php" ?>
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
+            <form class="form-signin" action="submit_login.php" method="POST">
               <div class="form-label-group">
-                <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputUsername">Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+                <label for="username">Username</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <label for="inputPassword">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                <label for="password">Password</label>
               </div>
 
               <!-- <div class="custom-control custom-checkbox mb-3">
