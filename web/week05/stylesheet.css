@@ -5,6 +5,10 @@
   width: auto;
 }
 
+.jumbotron {
+  margin-bottom: 0;
+}
+
 header {
   background-color: #eee;
 }
