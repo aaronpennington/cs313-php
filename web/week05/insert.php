@@ -31,7 +31,7 @@ catch (Exception $ex)
 }
 
 // // finally, redirect them to a new page to actually show the topics
-$post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;')
+$post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;');
 header("Location: post.php?postId=$post_id");
 
 die(); // we always include a die after redirects. In this case, there would be no
