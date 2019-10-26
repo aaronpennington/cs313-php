@@ -30,10 +30,11 @@ catch (Exception $ex)
 }
 
 // // finally, redirect them to a new page to actually show the topics
-$post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;');
-echo $post_id;
+// UH OH SOMETHINGS GONE WRONG HERE!!
+// $post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;');
+// echo $post_id;
 // $url = "post.php?id=".$post_id;
-// header("Location: ".$url);
+header("Location: post.php?id=9");
 
 exit(); // we always include a die after redirects. In this case, there would be no
 //        // harm if the user got the rest of the page, because there is nothing else
