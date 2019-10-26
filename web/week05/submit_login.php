@@ -13,7 +13,7 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = "SELECT * FROM public.USER WHERE public.USER.username='$username';";
       echo $query;
-      foreach ($db->query("SELECT * FROM public.USER WHERE public.USER.username='$username';") as $row)
+      foreach ($db->query("SELECT * FROM public.USER WHERE public.USER.username='".$username."';") as $row)
       {
         echo '<br/>';
         echo 'user: ' . $row['username'];
