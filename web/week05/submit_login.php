@@ -13,7 +13,7 @@ if ( ! empty( $_POST ) ) {
       $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\'';
       echo $query;
       $statement = $db->prepare($query);
-      $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
+      $statement->bindValue(':username', $_POST['username']);
       $statement->execute();
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       // $user = $results->fetchObject();
