@@ -28,6 +28,9 @@
           <li class="nav-item">
             <a class="nav-link" href="../week05/blog.php">Make Post</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../week05/login.php">Login</a>
+          </li>
         </ul>
       </div>
     </nav>
