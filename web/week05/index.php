@@ -14,10 +14,10 @@
   <title>Susan Bush's Blog</title>
 </head>
 
-<?php include "./includes/db.php"; ?>
+<?php include "../includes/db.php"; ?>
 
 <body>
-  <?php include "./includes/header.php"; ?>
+  <?php include "../includes/header.php"; ?>
 
   <div class="container">
     <p> Select all posts from a user: </p>
