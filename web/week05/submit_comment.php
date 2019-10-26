@@ -12,8 +12,8 @@
      $statement = $db->prepare($query);
      $statement->bindValue(':content', $text);
      $statement->bindValue(':comment_date', '\'now()\'');
-     $statement->bindValue(':post_id', (string)$post_id);
-     $statement->bindValue(':user_id', (string)$user_id);
+     $statement->bindValue(':post_id', strval($post_id));
+     $statement->bindValue(':user_id', $user_id);
      $statement->execute();
   
     // Now we bind the values to the placeholders. This does some nice things
