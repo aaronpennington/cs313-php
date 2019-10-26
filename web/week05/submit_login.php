@@ -12,7 +12,7 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = "HELLO THERE!");
       // /SELECT * FROM public.USER WHERE public.USER.username='admin';
-      echo $query;
+      echo($query);
       // $statement = $db->prepare($query);
       // $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
       // $statement->execute();
