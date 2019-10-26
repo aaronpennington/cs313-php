@@ -20,9 +20,10 @@ try
 	// Now we bind the values to the placeholders. This does some nice things
    // including sanitizing the input with regard to sql commands.
 
-   $post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;');
-   echo $post_id;
+   $query = 'SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;';
+   $result = pg_query($query) or die('Query failed: ' . pg_last_error());
    
+   echo $result;
 }
 catch (Exception $ex)
 {
