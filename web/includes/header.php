@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <header>
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
