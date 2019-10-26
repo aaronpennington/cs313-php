@@ -3,12 +3,14 @@
 session_start();
 
 include "../includes/db.sql";
+include "../includes/links.php";
+
 echo $_POST['username'];
 echo $_POST['password'];
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
-      $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\';');
+      $query = "SELECT * FROM public.USER WHERE public.USER.username='admin';");
       echo $query;
       // $statement = $db->prepare($query);
       // $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
