@@ -14,7 +14,7 @@ try
    $statement->bindValue(':subtitle', $subtitle);
    $statement->bindValue(':content', $content);
    $statement->bindValue(':post_date', '\'now()\'');
-   $statement->bindValue(':user_id', "0");
+   $statement->bindValue(':user_id', "1");
    $statement->execute();
 
 	// Now we bind the values to the placeholders. This does some nice things
