@@ -8,7 +8,7 @@ include "../includes/links.php" ?>
   <?php include "../includes/header.php"; ?>
 
   <div class="container">
-    <form action="insert.php" method="POST">
+    <form action="../week05/insert.php" method="POST">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTitle">Title</label>
