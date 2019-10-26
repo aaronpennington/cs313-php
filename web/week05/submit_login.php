@@ -8,6 +8,7 @@ include "../includes/links.php";
 echo $_POST['username'];
 echo $_POST['password'];
 $username = $_POST['username'];
+echo gettype($username);
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
