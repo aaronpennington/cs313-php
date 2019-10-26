@@ -24,7 +24,7 @@ include "../includes/links.php" ?>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputContent">Post Text</label>
-          <input type="textarea" class="form-control" name="inputContent">
+          <input type="textarea" rows=10 class="form-control" name="inputContent">
         </div>
       </div>
       <button type="submit" class="btn btn-primary">Submit Post</button>
