@@ -27,7 +27,7 @@ include "../includes/links.php" ?>
           <textarea rows=10 class="form-control" name="inputContent"></textarea>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit Post</button>
+      <input type="submit" class="btn btn-primary">Submit Post
     </form>
   </div>
 </body>
