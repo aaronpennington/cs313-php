@@ -7,7 +7,7 @@ $content = $_POST['inputContent'];
 date_default_timezone_set("America/Denver");
 $time = date("h:i:sa");
 
-require("./includes/db.php");
+require("../includes/db.php");
 $db = get_db();
 
 try

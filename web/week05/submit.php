@@ -1,5 +1,5 @@
 <?php
-  include "./includes/db.php";
+  include "../includes/db.php";
   $user_id = $_POST['user_id'];
   
   foreach ($db->query('SELECT public.user.username AS user_name, public.post.id AS post_id, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.USER.ID = ' . $user_id . ' AND public.POST.USER_ID = ' . $user_id . ' ORDER BY public.post.post_date;') as $row)
