@@ -20,22 +20,17 @@ if ( ! empty( $_POST ) ) {
       
       foreach ($db->query($query) as $row)
       {
-        echo '<br/>';
-        echo 'user: ' . $row['username'];
-        echo ' password: ' . $row['password'];
-        echo '<br/>';
+        $user = $row['username'];
       }
-      echo "DONE";
-      // $user = $results->fetchObject();
       
     		
-//     	// Verify user password and set $_SESSION
-//     	// if ( password_verify( $_POST['password'], $user->password ) ) {
-//     	// 	$_SESSION['user_id'] = $user->ID;
-    	// }
+    	// Verify user password and set $_SESSION
+    	if ( password_verify( $_POST['password'], $user->password ) ) {
+    		$_SESSION['user_id'] = $user->ID;
+    	}
     }
 
-    // header("Location: index.php");
-    // exit();
+    header("Location: index.php");
+    exit();
 }
 ?>
