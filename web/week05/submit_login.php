@@ -15,16 +15,16 @@ if ( ! empty( $_POST ) ) {
       $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
       $statement->execute();
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-      // $user = $results->fetchObject();
-      echo $results['display_name'];
+      $user = $results->fetchObject('username');
+      echo $user;
     		
-//     	// Verify user password and set $_SESSION
-//     	// if ( password_verify( $_POST['password'], $user->password ) ) {
-//     	// 	$_SESSION['user_id'] = $user->ID;
-    	// }
+     	// Verify user password and set $_SESSION
+    	if ( password_verify( $_POST['password'], $user->password ) ) {
+    		$_SESSION['user_id'] = $user->ID;
+    	}
     }
 
-    // header("Location: index.php");
-    // exit();
+    header("Location: index.php");
+    exit();
 }
 ?>
