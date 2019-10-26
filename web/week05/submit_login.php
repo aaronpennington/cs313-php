@@ -13,8 +13,13 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = "SELECT * FROM public.USER WHERE public.USER.username='$username';";
       echo $query;
-      $statement = $db->query($query);
-      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($db->query($query) as $row)
+      {
+        echo '<br/>';
+        echo 'user: ' . $row['username'];
+        echo ' password: ' . $row['password'];
+        echo '<br/>';
+      }
       echo "DONE";
       // $user = $results->fetchObject();
       
