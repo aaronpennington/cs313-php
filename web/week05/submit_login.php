@@ -10,9 +10,9 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = 'SELECT * FROM public.USERS WHERE username=:username');
       $statement = $db->prepare($query);
-      $statement->bindValue(':username', $_POST['username']);
+      $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
       $statement->execute();
-      // $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       // // $user = $results->fetchObject();
       // echo $results;
     		
