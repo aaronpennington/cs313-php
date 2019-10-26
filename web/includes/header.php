@@ -29,7 +29,14 @@
             <a class="nav-link" href="../week05/blog.php">Make Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../week05/login.php">Login</a>
+            <?php 
+              if (isset($_SESSION["user_id"])) {
+                echo "<a class='nav-link' href='../week05/logout.php'>Logout</a>";
+              }
+              else {
+                echo "<a class='nav-link' href='../week05/login.php'>Login</a>"
+              }
+            ?>
           </li>
         </ul>
       </div>
