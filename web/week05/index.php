@@ -4,16 +4,6 @@
 
   include "../includes/db.php"; 
   include "../includes/links.php"
-
-  // Check if user is logged in
-  if ( isset( $_SESSION['user_id'] ) ) {
-      // Grab user data from the database using the user_id
-      // Let them access the "logged in only" pages
-      echo $_SESSION['user_id'];
-  } else {
-      // Redirect them to the login page
-      header("Location: login.php");
-  }
 ?>
 
 <!DOCTYPE html>

@@ -2,7 +2,6 @@
 // Always start this first
 session_start();
 
-include "../includes/db.sql";
 include "../includes/links.php";
 
 echo $_POST['username'];
@@ -14,6 +13,7 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = "SELECT * FROM public.USER WHERE public.USER.username='$username';";
       echo $query;
+      include "../includes/db.sql";
       foreach ($db->query("SELECT * FROM public.USER WHERE public.USER.username='".$username."';") as $row)
       {
         echo '<br/>';
