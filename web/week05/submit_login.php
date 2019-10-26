@@ -2,19 +2,23 @@
 // Always start this first
 session_start();
 
+include "../includes/db.php";
 include "../includes/links.php";
 
 echo $_POST['username'];
 echo $_POST['password'];
 $username = $_POST['username'];
-echo gettype($username);
+echo $username;
+
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
+      
       // Getting submitted user data from database
       $query = "SELECT * FROM public.USER WHERE public.USER.username='$username';";
+      
       echo $query;
-      include "../includes/db.sql";
-      foreach ($db->query("SELECT * FROM public.USER WHERE public.USER.username='".$username."';") as $row)
+      
+      foreach ($db->query($query) as $row)
       {
         echo '<br/>';
         echo 'user: ' . $row['username'];
