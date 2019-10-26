@@ -14,10 +14,10 @@
   <title>Susan Bush's Blog</title>
 </head>
 
-<?php include "db.php"; ?>
+<?php include "./includes/db.php"; ?>
 
 <body>
-  <?php include "header.php"; ?>
+  <?php include "./includes/header.php"; ?>
 
   <div class="container">
     <?php 
