@@ -10,9 +10,9 @@ echo $_POST['password'];
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
-      $query = "HELLO THERE!");
+      $query = "HELLO THERE!";
       // /SELECT * FROM public.USER WHERE public.USER.username='admin';
-      echo($query);
+      echo $query;
       // $statement = $db->prepare($query);
       // $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
       // $statement->execute();
