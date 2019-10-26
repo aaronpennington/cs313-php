@@ -11,7 +11,7 @@ $username = $_POST['username'];
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
-      $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\'';
+      $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\';';
       echo $query;
       $statement = $db->prepare($query);
       $statement->bindValue(':username', $username, PDO::PARAM_STR);
