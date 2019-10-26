@@ -11,12 +11,14 @@ include "../includes/links.php" ?>
             <h5 class="card-title text-center">Sign In</h5>
             <form class="form-signin" action="submit_login.php" method="POST">
               <div class="form-label-group">
-                <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required
+                  autofocus>
                 <label for="username">Username</label>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="password" class="form-control" placeholder="Password" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                  required>
                 <label for="password">Password</label>
               </div>
 
