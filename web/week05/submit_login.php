@@ -3,7 +3,8 @@
 session_start();
 
 include "../includes/db.sql";
-echo "HELLO";
+echo $_POST['username'];
+echo $_POST['password'];
 // if ( ! empty( $_POST ) ) {
 //     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
 //       // Getting submitted user data from database
@@ -21,7 +22,7 @@ echo "HELLO";
 //     	// }
 //     }
 
-//     // header("Location: index.php");
-//     // exit();
+    // header("Location: index.php");
+    // exit();
 // }
 ?>
