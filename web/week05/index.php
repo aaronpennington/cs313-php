@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php 
   // Always start this first
   session_start();
@@ -18,6 +15,9 @@
       header("Location: login.php");
   }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <body>
   <?php include "../includes/header.php"; ?>
