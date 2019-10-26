@@ -25,6 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../week05/blog.php">Make Post</a>
+          </li>
         </ul>
       </div>
     </nav>
