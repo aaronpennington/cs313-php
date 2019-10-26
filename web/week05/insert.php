@@ -1,8 +1,8 @@
 <?php
 // get the data from the POST
-$title = $_POST['inputTitle'];
-$subtitle = $_POST['inputSubtitle'];
-$content = $_POST['inputContent'];
+$title = $_POST["inputTitle"];
+$subtitle = $_POST["inputSubtitle"];
+$content = $_POST["inputContent"];
 
 date_default_timezone_set("America/Denver");
 
