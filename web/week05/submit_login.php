@@ -16,9 +16,10 @@ if ( ! empty( $_POST ) ) {
       $statement = $db->prepare($query);
       $statement->bindValue(':username', $username, PDO::PARAM_STR);
       $statement->execute();
+      echo "DONE";
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       // $user = $results->fetchObject();
-      echo "DONE";
+      
     		
 //     	// Verify user password and set $_SESSION
 //     	// if ( password_verify( $_POST['password'], $user->password ) ) {
