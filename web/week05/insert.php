@@ -4,8 +4,7 @@ $title = $_POST['inputTitle'];
 $subtitle = $_POST['inputSubtitle'];
 $content = $_POST['inputContent'];
 
-require("../includes/db.php");
-$db = get_db();
+include "../includes/db.php";
 
 try
 {
