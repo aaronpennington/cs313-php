@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include "../includes/db.php";
   include "../includes/links.php";
   $user_id = $_POST['user_id'];

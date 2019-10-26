@@ -1,8 +1,10 @@
+<?php 
+session_start();
+include "../includes/db.php"; 
+include "../includes/links.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<?php include "../includes/db.php"; 
-include "../includes/links.php" ?>
 
 <body>
   <?php include "../includes/header.php"; ?>

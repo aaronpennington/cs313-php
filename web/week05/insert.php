@@ -1,4 +1,5 @@
 <?php
+session_start();
 // get the data from the POST
 $title = $_POST['inputTitle'];
 $subtitle = $_POST['inputSubtitle'];

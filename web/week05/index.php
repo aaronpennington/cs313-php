@@ -1,5 +1,4 @@
-<?php 
-  // Always start this first
+<?php
   session_start();
 
   include "../includes/db.php"; 
