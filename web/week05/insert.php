@@ -22,8 +22,8 @@ try
 
    $query2 = 'SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;';
    $result = pg_query($query2) or die('Query failed: ' . pg_last_error());
-   
-   echo $result;
+   $row=pg_fetch_assoc($result)
+   echo $row;
 }
 catch (Exception $ex)
 {
