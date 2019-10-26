@@ -36,8 +36,8 @@
     </nav>
     <div>
       <?php 
-        if ( isset( $_SESSION["user_id"] ) ) {
-          echo "<p>Logged in as: " . $_SESSION["user_id"] . "</p>";
+        if ( isset( $_SESSION["display_name"] ) ) {
+          echo "<p>Logged in as: " . $_SESSION["display_name"] . "</p>";
         } else {
             echo "<p>Not Signed In</p>";
         }
