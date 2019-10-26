@@ -19,11 +19,6 @@ try
 
 	// Now we bind the values to the placeholders. This does some nice things
    // including sanitizing the input with regard to sql commands.
-
-   $query2 = 'SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;';
-   $result = pg_query($query2) or die('Query failed: ' . pg_last_error());
-   $row=pg_fetch_assoc($result)
-   echo 'hello?';
 }
 catch (Exception $ex)
 {
@@ -34,11 +29,7 @@ catch (Exception $ex)
 }
 
 // // finally, redirect them to a new page to actually show the topics
-// UH OH SOMETHINGS GONE WRONG HERE!!
-// $post_id = $db->query('SELECT id FROM public.POST ORDER BY id DESC LIMIT 1;');
-// echo $post_id;
-// $url = "post.php?id=".$post_id;
-// header("Location: post.php?id=$row");
+header("Location: index.php");
 
 exit(); // we always include a die after redirects. In this case, there would be no
 //        // harm if the user got the rest of the page, because there is nothing else
