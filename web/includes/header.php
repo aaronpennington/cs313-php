@@ -30,12 +30,12 @@
           </li>
           <li class="nav-item">
             <?php 
-              if (isset($_SESSION["user_id"])) {
-                echo "<a class='nav-link' href='../week05/logout.php'>Logout</a>";
-              }
-              else {
-                echo "<a class='nav-link' href='../week05/login.php'>Login</a>"
-              }
+              // if (isset($_SESSION["user_id"])) {
+              //   echo "<a class='nav-link' href='../week05/logout.php'>Logout</a>";
+              // }
+              // else {
+              //   echo "<a class='nav-link' href='../week05/login.php'>Login</a>"
+              // }
             ?>
           </li>
         </ul>
