@@ -20,11 +20,12 @@ if ( ! empty( $_POST ) ) {
       foreach ($db->query($query) as $row)
       {
         $user = $row['username'];
+        $password = $row['password'];
       }
       
     		
     	// Verify user password and set $_SESSION
-    	if ( password_verify( $_POST['password'], $user->password ) ) {
+    	if ($_POST['password'] == $password)) {
     		$_SESSION['user_id'] = $user;
     	}
     }
