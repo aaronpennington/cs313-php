@@ -6,6 +6,8 @@
   $text = $_POST['comment'];
   $post_id = $_GET['postId'];
 
+  echo $post_id;
+
   try
   {
      $query = 'INSERT INTO public.COMMENT(content, comment_date, post_id, user_id) VALUES(:content, :comment_date, :post_id, :user_id)';

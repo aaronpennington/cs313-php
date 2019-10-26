@@ -23,7 +23,7 @@ include "../includes/links.php" ?>
 
     <hr>
     <h2>Comments</h2>
-    <form class="form-group" action="submit_comment.php?postId=" . $post_id method="POST">
+    <form class="form-group" action="submit_comment.php?postId=<?php echo $post_id;?>" method="POST">
       <label for="comment">Comment:</label>
       <textarea class="form-control" rows="5" name="comment"></textarea>
       <button type="submit" class="btn btn-primary">Submit Comment</button>
