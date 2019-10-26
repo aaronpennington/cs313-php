@@ -7,13 +7,14 @@ include "../includes/links.php";
 
 echo $_POST['username'];
 echo $_POST['password'];
+$username = $_POST['username'];
 if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
       $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\'';
       echo $query;
       $statement = $db->prepare($query);
-      $statement->bindValue(':username', $_POST['username']);
+      $statement->bindValue(':username', $username);
       $statement->execute();
       $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       // $user = $results->fetchObject();
