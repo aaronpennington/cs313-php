@@ -12,13 +12,13 @@ $db = get_db();
 
 try
 {
-   $query = 'INSERT INTO note(course_id, title, content, date, time) VALUES(:course, :title, :content, :date, :time)';
+   $query = 'INSERT INTO post(title, subtitle, content, post_date, user_id) VALUES(:title, :subtitle, :content, :post_date, :user_id)';
    $statement = $db->prepare($query);
-   $statement->bindValue(':course', $course);
    $statement->bindValue(':title', $title);
-   $statement->bindValue(':content', $note);
-   $statement->bindValue(':date', '\'now()\'');
-   $statement->bindValue(':time', $time);
+   $statement->bindValue(':subtitle', $subtitle);
+   $statement->bindValue(':content', $content);
+   $statement->bindValue(':post_date', '\'now()\'');
+   $statement->bindValue(':user_id', "0");
    $statement->execute();
 
 	// Now we bind the values to the placeholders. This does some nice things
