@@ -9,10 +9,11 @@ if ( ! empty( $_POST ) ) {
     if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
       // Getting submitted user data from database
       $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\';');
-      $statement = $db->prepare($query);
-      $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
-      $statement->execute();
-      $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+      echo $query;
+      // $statement = $db->prepare($query);
+      // $statement->bindValue(':username', $_POST['username'], PDO::PARAM_STR);
+      // $statement->execute();
+      // $results = $statement->fetchAll(PDO::FETCH_ASSOC);
       // // $user = $results->fetchObject();
       // echo $results;
     		
