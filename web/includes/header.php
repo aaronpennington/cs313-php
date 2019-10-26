@@ -1,7 +1,9 @@
 <header>
-  <div class="jumbotron">
-    <h1>Susan Bush</h1>
-    <p>Susan is a teacher for VIP Kids</p>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Susan Bush</h1>
+      <p>Susan is a teacher for VIP Kids</p>
+    </div>
   </div>
 
   <div>
