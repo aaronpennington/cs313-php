@@ -13,7 +13,7 @@ if ( ! empty( $_POST ) ) {
       // Getting submitted user data from database
       $query = 'SELECT * FROM public.USER WHERE public.USER.username=\':username\';';
       echo $query;
-      $statement = $db->prepare($query);
+      $statement = $db->prepare('SELECT * FROM public.USER WHERE public.USER.username=\':username\';');
       $statement->bindValue(':username', $username, PDO::PARAM_STR);
       $statement->execute();
       echo "DONE";
