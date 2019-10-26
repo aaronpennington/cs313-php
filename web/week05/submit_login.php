@@ -23,11 +23,12 @@ if ( ! empty( $_POST ) ) {
         //$password = $row['password'];
       }
       
+      $_SESSION["user_id"] = $user;
     		
     	// Verify user password and set $_SESSION
-    	if ($_POST['password'] === "password")) {
-    		$_SESSION["user_id"] = $user;
-    	}
+    	// if ($_POST['password'] === "password")) {
+    	// 	$_SESSION["user_id"] = $user;
+    	// }
     }
 
     header("Location: index.php");
