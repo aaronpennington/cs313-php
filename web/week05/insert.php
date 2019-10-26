@@ -19,8 +19,6 @@ try
 
 	// Now we bind the values to the placeholders. This does some nice things
    // including sanitizing the input with regard to sql commands.
-   
-   echo "We did it! " . $_POST['inputContent'];
 }
 catch (Exception $ex)
 {
