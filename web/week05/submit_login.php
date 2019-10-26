@@ -26,7 +26,7 @@ if ( ! empty( $_POST ) ) {
     		
     	// Verify user password and set $_SESSION
     	if ($_POST['password'] == $password)) {
-    		$_SESSION['user_id'] = $user;
+    		$_SESSION["user_id"] = $user;
     	}
     }
 
