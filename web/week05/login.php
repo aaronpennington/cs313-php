@@ -1,4 +1,6 @@
-<?php include "../includes/db.php"; 
+<?php 
+session_start();
+include "../includes/db.php"; 
 include "../includes/links.php" ?>
 
 <body>
