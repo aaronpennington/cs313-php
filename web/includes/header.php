@@ -37,10 +37,10 @@
     <div>
       <?php 
         if ( isset( $_SESSION['user_id'] ) ) {
-          echo "<p>Logged in as: ".$_SESSION['user_id']."</p>";
-      } else {
-          echo "<p>Not Signed In</p>";
-      }
+          echo "<p>Logged in as: " . $_SESSION["user_id"] . "</p>";
+        } else {
+            echo "<p>Not Signed In</p>";
+        }
       ?>
     </div>
 </header>
