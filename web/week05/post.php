@@ -34,11 +34,6 @@ include "../includes/links.php" ?>
         echo '<a class="nav-link" href="../week05/login.php">Log In to Leave a Comment</a>';
       }
     ?>
-    <form class="form-group" action="submit_comment.php?postId=<?php echo $post_id;?>" method="POST">
-      <label for="comment">Comment:</label>
-      <textarea class="form-control" rows="5" name="comment"></textarea>
-      <button type="submit" class="btn btn-primary">Submit Comment</button>
-    </form>
 
     <?php 
       foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.comment.content AS content, public.comment.comment_date AS comment_date FROM public.USER, public.COMMENT, public.POST WHERE public.POST.ID = ' . $post_id . ' AND public.COMMENT.POST_ID = public.POST.ID AND public.COMMENT.USER_ID = public.USER.ID;') as $row)
