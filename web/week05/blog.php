@@ -40,6 +40,8 @@ include "../includes/links.php" ?>
       <button type="submit" class="btn btn-primary">Submit Post</button>
     </form>
   </div>
+
+  <?php include "../includes/footer.php"; ?>
 </body>
 
 </html>

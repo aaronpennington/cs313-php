@@ -35,4 +35,5 @@ include "../includes/links.php" ?>
       </div>
     </div>
   </div>
+  <?php include "../includes/footer.php"; ?>
 </body>
