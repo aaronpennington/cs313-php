@@ -1,9 +1,9 @@
 INSERT INTO public.USER (username,
                   password,
                   display_name)
-        VALUES ('penningtonb',
-        'p4ssword',
-        'Aaron P');
+        VALUES ('admin',
+        'password',
+        'Admin');
 
 INSERT INTO public.USER (username,
                   password,
