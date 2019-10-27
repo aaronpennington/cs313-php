@@ -7,10 +7,11 @@
 
 .jumbotron {
   margin-bottom: 0;
+  background-color: seagreen;
 }
 
 header {
-  background-color: seagreen;
+  background-color: #eee;
 }
 
 #nav.affix {
