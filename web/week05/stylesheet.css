@@ -25,6 +25,11 @@ header {
   margin-top: 100px;
 }
 
+#recentPost {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
 footer {
   background-color: #4285F4;
 }
