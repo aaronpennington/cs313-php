@@ -23,6 +23,17 @@ include "../includes/links.php" ?>
 
     <hr>
     <h2>Comments</h2>
+    <?php 
+      if (isset($_SESSION["user_id"])) {
+        echo '<form class="form-group" action="submit_comment.php?postId="'. $post_id.'";" method="POST"> <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" name="comment"></textarea>
+        <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>';
+      }
+      else {
+        echo '<a class="nav-link" href="../week05/login.php">Log In to Leave a Comment</a>';
+      }
+    ?>
     <form class="form-group" action="submit_comment.php?postId=<?php echo $post_id;?>" method="POST">
       <label for="comment">Comment:</label>
       <textarea class="form-control" rows="5" name="comment"></textarea>
