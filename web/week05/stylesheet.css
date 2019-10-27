@@ -25,6 +25,10 @@ header {
   margin-top: 100px;
 }
 
+footer {
+  background-color: #4285F4;
+}
+
 /* LOGIN PAGE STYLES */
 :root {
   --input-padding-x: 1.5rem;
