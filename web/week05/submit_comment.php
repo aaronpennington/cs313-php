@@ -6,7 +6,7 @@
   $text = $_POST['comment'];
   $post_id = $_GET['postId'];
 
-  echo $post_id;
+  echo gettype($post_id);
 
   try
   {
