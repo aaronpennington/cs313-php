@@ -31,7 +31,7 @@
     <div id="recentPost">
       <h1>Most Recent Post</h1>
 
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 25rem;">
         <div class="card-body">
           <?php 
             $statement = $db->query('SELECT public.POST.title AS title, public.POST.subtitle AS subtitle, public.POST.content as content, public.POST.post_date AS post_date, public.USER.display_name AS display_name FROM public.POST, public.USER WHERE public.POST.user_id = public.USER.id ORDER BY public.POST.id DESC;');
