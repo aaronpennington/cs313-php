@@ -14,7 +14,7 @@
      $statement = $db->prepare($query);
      $statement->bindValue(':content', $text);
      $statement->bindValue(':comment_date', '\'now()\'');
-     $statement->bindValue(':post_id', strval($post_id));
+     $statement->bindValue(':post_id', $post_id);
      $statement->bindValue(':user_id', $user_id);
      $statement->execute();
   
