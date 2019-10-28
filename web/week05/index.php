@@ -30,17 +30,22 @@
 
     <div id="recentPost">
       <h1>Most Recent Post</h1>
-      <?php 
-        $statement = $db->query('SELECT public.POST.title AS title, public.POST.subtitle AS subtitle, public.POST.content as content, public.POST.post_date AS post_date, public.USER.display_name AS display_name FROM public.POST, public.USER WHERE public.POST.user_id = public.USER.id ORDER BY public.POST.id DESC;');
-        
-        $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-        echo '<h1>' . $row['title'] . '</h2>';
-        echo '<h3>' . $row['subtitle'] . '</h3>';
-        echo '<p>' . $row['content'] . '</p>';
-        echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
-        
-      ?>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <?php 
+            $statement = $db->query('SELECT public.POST.title AS title, public.POST.subtitle AS subtitle, public.POST.content as content, public.POST.post_date AS post_date, public.USER.display_name AS display_name FROM public.POST, public.USER WHERE public.POST.user_id = public.USER.id ORDER BY public.POST.id DESC;');
+            
+            $row = $statement->fetch(PDO::FETCH_ASSOC);
+
+            echo '<h5 class="card-title">' . $row['title'] . '</h5>';
+            echo '<h6 class="card-subtitle mb-2 text-muted">' . $row['subtitle'] . '</h6>';
+            echo '<p class="card-text">' . $row['content'] . '</p>';
+            echo '<h6> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h6>';
+          ?>
+        </div>
+      </div>
+
     </div>
   </div>
   <?php include "../includes/footer.php"; ?>
