@@ -11,13 +11,19 @@ include "../includes/links.php" ?>
 
   <div class="container">
     <?php 
+    $user_id = $_SESSION["user_id"];
     $post_id = $_GET['id'];
-    foreach ($db->query('SELECT public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.POST.ID = '. $post_id . ' AND public.POST.USER_ID = public.USER.ID;') as $row)
+    foreach ($db->query('SELECT public.user.id AS user_id, public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.POST.ID = '. $post_id . ' AND public.POST.USER_ID = public.USER.ID;') as $row)
     {
       echo '<h1>' . $row['title'] . '</h2>';
       echo '<h3>' . $row['subtitle'] . '</h3>';
       echo '<p>' . $row['content'] . '</p>';
       echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
+
+      if ($row['user_id'] === $user_id) {
+        echo '<button type="button" class="btn btn-outline-primary">Edit</button>';
+        echo '<button type="button" class="btn btn-outline-primary">Delete</button>';
+      }
     }
     ?>
 
