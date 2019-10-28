@@ -25,7 +25,7 @@ include "../includes/links.php" ?>
     <h2>Comments</h2>
     <?php 
       if (isset($_SESSION["user_id"])) {
-        echo '<form class="form-group" action="submit_comment.php?postId='. $post_id.';" method="POST"> <label for="comment">Comment:</label>
+        echo '<form class="form-group" action="submit_comment.php?postId='. $post_id.'" method="POST"> <label for="comment">Comment:</label>
         <textarea class="form-control" rows="5" name="comment"></textarea>
         <button type="submit" class="btn btn-primary">Submit Comment</button>
         </form>';
