@@ -67,6 +67,8 @@ function submitEditPost() {
   var post_text = $("#post_text").val();
 
   console.log(post_title);
+  console.log(post_subtitle);
+  console.log(post_text);
 
   $.post("submit_edit_post.php", {
       post_title: post_title,
