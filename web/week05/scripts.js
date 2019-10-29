@@ -20,9 +20,8 @@ function editPost() {
   $("#post_text").remove();
 
   var edit_text = document.createElement("textarea");
-  edit_text.setText
   edit_text.setAttribute("id", "post_text");
-  edit_text.setAttribute("text", post_text);
+  edit_text.setAttribute("value", post_text);
   edit_text.setAttribute("rows", "10");
   edit_text.setAttribute("cols", "75");
   $("#post_div").prepend(edit_text);
