@@ -21,7 +21,7 @@ function editPost() {
 
   var edit_text = document.createElement("textarea");
   edit_text.setAttribute("id", "post_text");
-  edit_text.innerHTML(post_text);
+  edit_text.innerHTML = post_text;
   edit_text.setAttribute("rows", "10");
   edit_text.setAttribute("cols", "75");
   $("#post_div").prepend(edit_text);
