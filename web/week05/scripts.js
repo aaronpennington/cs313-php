@@ -11,9 +11,9 @@ function submitFormData() {
 
 function editPost() {
   // Replace tags with text inputs using AJAX
-  let post_title = $("#post_title").val();
-  let post_subtitle = $("#post_subtitle").val();
-  let post_text = $("#post_text").val();
+  let post_title = $("#post_title").text();
+  let post_subtitle = $("#post_subtitle").text();
+  let post_text = $("#post_text").text();
 
   $("#post_title").remove();
 
