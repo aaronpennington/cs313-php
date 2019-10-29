@@ -62,9 +62,11 @@ function editPost() {
 function submitEditPost() {
   // AJAX call to php file here.
   // php will update database entry.
-  let post_title = $("#post_title").val();
-  let post_subtitle = $("#post_subtitle").val();
-  let post_text = $("#post_text").val();
+  var post_title = $("#post_title").val();
+  var post_subtitle = $("#post_subtitle").val();
+  var post_text = $("#post_text").val();
+
+  console.log(post_title);
 
   $.post("submit_edit_post.php", {
       post_title: post_title,
