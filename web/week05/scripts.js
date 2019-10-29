@@ -19,6 +19,11 @@ function editPost() {
   $("#post_subtitle").remove();
   $("#post_text").remove();
 
+  var submit_edit_btn = document.createElement("button");
+  submit_edit_btn.setAttribute("onclick", "submitEditPost()");
+  submit_edit_btn.setAttribute("id", "submit_edit_btn");
+  $("#post_div").prepend(submit_edit_btn);
+
   var edit_text = document.createElement("textarea");
   edit_text.setAttribute("id", "post_text");
   edit_text.innerHTML = post_text;
@@ -47,9 +52,28 @@ function editPost() {
   label_title.setAttribute("value", "Title: ");
   $("#post_div").append(label_title);
 
+  // add a submit button, labels, and an AJAX call to a php file.
+  // the php file, btw, will update the entry in the database with 
+  // the new data. :)
 
 
+}
 
+function submitEditPost() {
+  // AJAX call to php file here.
+  // php will update database entry.
+  let post_title = $("#post_title").text();
+  let post_subtitle = $("#post_subtitle").text();
+  let post_text = $("#post_text").text();
+
+  $.post("submit_edit_post.php", {
+      post_title: post_title,
+      post_subtitle: post_subtitle,
+      post_text: post_text
+    },
+    function (data) {
+      console.log("Success! Updated database. " + data);
+    });
 }
 
 function editComment() {
