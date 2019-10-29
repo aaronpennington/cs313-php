@@ -20,7 +20,7 @@
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
   </script>
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <script src="scripts.js"></script>
+  <link rel="stylesheet" type="text/css" href="../week05/stylesheet.css">
+  <script src="../week05/scripts.js"></script>
   <title>Susan Bush's Blog</title>
 </head>
