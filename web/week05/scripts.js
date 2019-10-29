@@ -21,10 +21,12 @@ function editPost() {
 
   var edit_text = document.createElement("textarea");
   edit_text.setAttribute("id", "post_text");
-  edit_text.setAttribute("text", post_text);
+  edit_text.innerHTML(post_text);
   edit_text.setAttribute("rows", "10");
   edit_text.setAttribute("cols", "75");
   $("#post_div").prepend(edit_text);
+
+  $("#post_div").prepend(document.createElement("br"));
 
   var edit_subtitle = document.createElement("input");
   edit_subtitle.setAttribute("type", "text");
@@ -39,8 +41,6 @@ function editPost() {
   edit_title.setAttribute("value", post_title);
   edit_title.setAttribute("id", "post_title");
   $("#post_div").prepend(edit_title);
-
-  $("#post_div").prepend(document.createElement("br"));
 
   var label_title = document.createElement("label");
   label_title.setAttribute("for", "post_title");
