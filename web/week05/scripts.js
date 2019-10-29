@@ -32,7 +32,7 @@ function editPost() {
   edit_subtitle.setAttribute("id", "post_subtitle");
   $("#post_div").prepend(edit_subtitle);
 
-  $("post_div").prepend(document.createElement("br"));
+  $("#post_div").prepend(document.createElement("br"));
 
   var edit_title = document.createElement("input");
   edit_title.setAttribute("type", "text");
@@ -40,7 +40,7 @@ function editPost() {
   edit_title.setAttribute("id", "post_title");
   $("#post_div").prepend(edit_title);
 
-  $("post_div").prepend(document.createElement("br"));
+  $("#post_div").prepend(document.createElement("br"));
 
   var label_title = document.createElement("label");
   label_title.setAttribute("for", "post_title");
