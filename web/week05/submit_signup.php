@@ -7,13 +7,14 @@
   $display_name = $_POST['display_name'];
 
   // hash the password here. 
+  $h_password = password_hash($password, PASSWORD_DEFAULT);
 
   try {
     $query = 'INSERT INTO public.USER(username, password, display_name) VALUES(:username, :password, :display_name)';
 
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
-    $statement->bindValue(':password', $password); // store the hashed password
+    $statement->bindValue(':password', $h_password);
     $statement->bindValue(':display_name', $display_name);
     $statement->execute();
 
@@ -29,7 +30,7 @@
   }
 
   // // finally, redirect them to a new page to actually show the topics
-  header("Location: index.php");
+  header("Location: login.php");
 
   exit();
 ?>
