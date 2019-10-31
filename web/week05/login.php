@@ -8,13 +8,15 @@ include "../includes/links.php";
   <?php include "../includes/header.php"; ?>
   <div class="container">
     <?php 
-      if (isset($_GET['login_success'])) {
-        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Login failed!</strong> Please check your username and password.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>'
+      if (! empty($_GET )){
+        if (isset($_GET['login_success'])) {
+          echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Login failed!</strong> Please check your username and password.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>'
+        }
       }
     ?>
     <div class="row">
