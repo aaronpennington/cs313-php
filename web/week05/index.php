@@ -28,7 +28,7 @@
     <div id="posts">
     </div>
 
-    <div id="recentPost" class="container">
+    <div id="recentPost">
       <div class="row">
         <h1>Most Recent Posts</h1>
       </div>
