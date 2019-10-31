@@ -1,11 +1,22 @@
 <?php 
 session_start();
 include "../includes/db.php"; 
-include "../includes/links.php" ?>
+include "../includes/links.php";
+?>
 
 <body>
   <?php include "../includes/header.php"; ?>
   <div class="container">
+    <?php 
+      if (isset($_GET['login_success'])) {
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Login failed!</strong> Please check your username and password.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>'
+      }
+    ?>
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">

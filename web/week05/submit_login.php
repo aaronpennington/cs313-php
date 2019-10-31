@@ -31,7 +31,7 @@ if ( ! empty( $_POST ) ) {
       }
     }
 
-    header("Location: index.php");
+    header("Location: login.php?login_success=0");
     exit();
 }
 ?>
