@@ -45,14 +45,25 @@ include "../includes/links.php" ?>
     ?>
 
     <?php 
+    echo '<table class="table table-striped">
+    <tbody>
+    ';
+
+      // List all post comments in the database.
       foreach ($db->query('SELECT public.user.id AS user_id, public.user.username AS user_name, public.user.display_name AS display_name, public.comment.content AS content, public.comment.comment_date AS comment_date FROM public.USER, public.COMMENT, public.POST WHERE public.POST.ID = ' . $post_id . ' AND public.COMMENT.POST_ID = public.POST.ID AND public.COMMENT.USER_ID = public.USER.ID;') as $row)
       {
-        echo '<p>' . $row['content'] . ' - ' . $row['display_name'] . ' at ' . $row['comment_date'] . '</p>';
-        if ($row['user_id'] === $user_id) {
-          echo '<button type="button" class="btn btn-outline-primary">Edit</button>';
-          echo '<button type="button" class="btn btn-outline-primary">Delete</button>';
-        }
+        // echo '<p>' . $row['content'] . ' - ' . $row['display_name'] . ' at ' . $row['comment_date'] . '</p>';
+        // if ($row['user_id'] === $user_id) {
+        //   echo '<button type="button" class="btn btn-outline-primary">Edit</button>';
+        //   echo '<button type="button" class="btn btn-outline-primary">Delete</button>';
+        // }
+        
+        echo '<tr><td>' . $row['display_name'] . '<br>on' . row['comment_date'] . '</td>';
+        echo '<tr><td>' . $row['content'] . '</td></tr>';
+        
       }
+
+      echo '</tbody></table>';
     ?>
   </div>
   <?php include "../includes/footer.php"; ?>
