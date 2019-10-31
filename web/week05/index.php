@@ -38,7 +38,7 @@
             
             $row = $statement->fetch(PDO::FETCH_ASSOC);
 
-            echo '<h5 class="card-title"><a href="post.php?id='. $row['post_id'] . '>' . $row['title'] . '</a></h5>';
+            echo '<h5 class="card-title"><a href="post.php?id='. $row['post_id'] . '">' . $row['title'] . '</a></h5>';
             echo '<h6 class="card-subtitle mb-2 text-muted">' . $row['subtitle'] . '</h6>';
             echo '<p class="card-text">' . $row['content'] . '</p>';
             echo '<h6> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h6>';
