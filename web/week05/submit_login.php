@@ -28,10 +28,12 @@ if ( ! empty( $_POST ) ) {
       }
       else {
         echo "Error logging in. Password is incorrect.";
+        header("Location: login.php?login_success=0");
+        exit();
       }
     }
 
-    header("Location: login.php?login_success=0");
+    header("Location: index.php");
     exit();
 }
 ?>
