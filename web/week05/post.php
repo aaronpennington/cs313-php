@@ -58,7 +58,7 @@ include "../includes/links.php" ?>
         //   echo '<button type="button" class="btn btn-outline-primary">Delete</button>';
         // }
         
-        echo '<tr><td><strong>' . $row['display_name'] . '</strong><br> on' . $row['comment_date'] . '</td>';
+        echo '<tr><td><strong>' . $row['display_name'] . '</strong><br> on ' . $row['comment_date'] . '</td>';
         echo '<td>' . $row['content'] . '</td></tr>';
         
       }
