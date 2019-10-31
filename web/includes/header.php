@@ -36,6 +36,7 @@
               }
               else {
                 echo '<a class="nav-link" href="../week05/login.php">Login</a>';
+                echo '<a class="nav-link" href="../week05/signup.php">Sign Up</a>';
               }
             ?>
           </li>

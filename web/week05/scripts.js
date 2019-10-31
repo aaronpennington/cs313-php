@@ -9,6 +9,23 @@ function submitFormData() {
     });
 }
 
+function verifyPassword() {
+  var password = $("#password");
+  var v_password = $("#verify_password");
+  var message = $('#confirm-message');
+
+  //Set the colors we will be using ...
+  var good_color = "#66cc66";
+  var bad_color = "#ff6666";
+  if (password.val() == v_password.val()) {
+    v_password.css('background-color', good_color);
+    message.css('color', good_color).html("Passwords Match!");
+  } else {
+    v_password.css('background-color', bad_color);
+    message.css('color', bad_color).html("Passwords Do Not Match!");
+  }
+}
+
 function editPost() {
   // Replace tags with text inputs using AJAX
   let post_title = $("#post_title").text();
