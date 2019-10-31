@@ -33,7 +33,7 @@ include "../includes/links.php" ?>
 
               <div class="form-label-group">
                 <input type="password" id="verify_password" name="verify_password" class="form-control"
-                  placeholder="Verify Password" onchange="verifyPassword()" required>
+                  placeholder="Verify Password" onkeyup="verifyPassword();" required>
                 <label for="verify_password">Confirm Password</label>
                 <span id="confirm-message" class="confirm-message"></span>
               </div>
