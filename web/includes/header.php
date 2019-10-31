@@ -32,14 +32,13 @@
           <li class="nav-item">
             <?php 
               if (isset($_SESSION["user_id"])) {
-                echo '<a class="nav-link" href="../week05/logout.php">Logout</a>';
+                echo '<a class="nav-link" href="../week05/logout.php">Logout</a></li>';
               }
               else {
-                echo '<a class="nav-link" href="../week05/login.php">Login</a>';
-                echo '<a class="nav-link" href="../week05/signup.php">Sign Up</a>';
+                echo '<a class="nav-link" href="../week05/login.php">Login</a></li>';
+                echo '<li class="nav-item"><a class="nav-link" href="../week05/signup.php">Sign Up</a></li>';
               }
             ?>
-          </li>
         </ul>
       </div>
     </nav>
