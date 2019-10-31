@@ -94,7 +94,7 @@ function submitEditPost() {
       post_text: post_text
     },
     function (data) {
-      console.log("Success! Updated database. " + data);
+      console.log("Success! Updated database.");
     });
 }
 
