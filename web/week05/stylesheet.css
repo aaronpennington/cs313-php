@@ -34,6 +34,10 @@ header {
   width: 15%;
 }
 
+#recentPostCard {
+  padding: 25px;
+}
+
 footer {
   background-color: #4285F4;
 }
