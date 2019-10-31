@@ -59,7 +59,7 @@ include "../includes/links.php" ?>
         // }
         
         echo '<tr><td>' . $row['display_name'] . '<br>on' . row['comment_date'] . '</td>';
-        echo '<tr><td>' . $row['content'] . '</td></tr>';
+        echo '<td>' . $row['content'] . '</td></tr>';
         
       }
 
