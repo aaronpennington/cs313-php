@@ -14,7 +14,7 @@ $post_text = $_POST['post_text'];
 // $db->query($query);
 
 try {
-  $query = 'UPDATE public.POST SET public.post.title=:post_title, public.post.subtitle=:post_subtitle, public.post.content=:post_text WHERE public.post.id=:post_id';
+  $query = 'UPDATE public.post SET public.post.title=:post_title, public.post.subtitle=:post_subtitle, public.post.content=:post_text WHERE public.post.id=:post_id';
 
   $statement = $db->prepare($query);
   $statement->bindValue(':post_title', $post_title);
