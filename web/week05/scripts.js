@@ -124,8 +124,5 @@ function submitEditPost() {
 }
 
 function deletePost() {
-  $.post("submit_delete_post.php", {},
-    function (data) {
-      console.log("Post deleted");
-    });
+  $.post("submit_delete_post.php");
 }
