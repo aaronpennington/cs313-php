@@ -122,3 +122,10 @@ function submitEditPost() {
       $("#post_div").prepend(new_title);
     });
 }
+
+function deletePost() {
+  $.post("submit_delete_post.php", {},
+    function (data) {
+      console.log("Post deleted");
+    });
+}

@@ -24,7 +24,7 @@ include "../includes/links.php" ?>
 
       if ($row['user_id'] === $user_id) {
         echo '<button type="button" class="btn btn-outline-primary" onclick="editPost()">Edit</button>';
-        echo '<button type="button" class="btn btn-outline-primary" onclick="submit_delete_post.php">Delete</button>';
+        echo '<button type="button" class="btn btn-outline-primary" onclick="deletePost()">Delete</button>';
       }
       echo '</div>';
     }

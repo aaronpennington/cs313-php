@@ -15,8 +15,6 @@
   }
   catch (Exception $ex)
   {
-    // Please be aware that you don't want to output the Exception message in
-    // a production environment
     echo "Error with DB. Details: $ex";
     die();
   }
