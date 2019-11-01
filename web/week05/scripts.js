@@ -95,6 +95,25 @@ function submitEditPost() {
     },
     function (data) {
       console.log("Success! Updated database.");
+      $("#post_title").remove();
+      $("#post_subtitle").remove();
+      $("#post_text").remove();
+      $("#submit_edit_btn").remove();
+
+      var new_title = document.createElement("h1");
+      new_title.setAttribute("id", "post_title");
+      new_title.innerHTML = post_title;
+      $("#post_div").prepend(new_title);
+
+      var new_subtitle = document.createElement("h3");
+      new_subtitle.setAttribute("id", "post_subtitle");
+      new_subtitle.innerHTML = post_subtitle;
+      $("#post_div").prepend(new_subtitle);
+
+      var new_text = document.createElement("p");
+      new_text.setAttribute("id", "post_text");
+      new_text.innerHTML = post_text;
+      $("#post_div").prepend(new_text);
     });
 }
 

@@ -17,7 +17,7 @@ include "../includes/links.php" ?>
     foreach ($db->query('SELECT public.user.id AS user_id, public.user.username AS user_name, public.user.display_name AS display_name, public.post.title AS title, public.post.subtitle AS subtitle, public.post.content AS content, public.post.post_date AS post_date FROM public.USER, public.POST WHERE public.POST.ID = '. $post_id . ' AND public.POST.USER_ID = public.USER.ID;') as $row)
     {
       echo '<div id="post_div">';
-      echo '<h1 id="post_title">' . $row['title'] . '</h2>';
+      echo '<h1 id="post_title">' . $row['title'] . '</h1>';
       echo '<h3 id="post_subtitle">' . $row['subtitle'] . '</h3>';
       echo '<p id="post_text">' . $row['content'] . '</p>';
       echo '<h5> Posted by ' . $row['display_name'] . ' on ' . $row['post_date'] . '</h5>';
