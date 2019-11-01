@@ -103,7 +103,7 @@ function submitEditPost() {
       $("#post_subtitle").remove();
       $("#post_text").remove();
       $("#submit_edit_btn").remove();
-      $(".edit_br").removeAll();
+      $(".edit_br").remove();
 
       var new_text = document.createElement("p");
       new_text.setAttribute("id", "post_text");
