@@ -121,9 +121,3 @@ function submitEditPost() {
       $("#post_div").prepend(new_title);
     });
 }
-
-function editComment() {
-
-
-
-}
