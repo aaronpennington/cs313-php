@@ -5,7 +5,7 @@ include "../includes/links.php";
 ?>
 
 <body>
-  <?php $active_li_login = "active";
+  <?php $active_li_login = 'active';
   include "../includes/header.php"; 
   ?>
   <div class="container">

@@ -4,8 +4,10 @@ include "../includes/db.php";
 include "../includes/links.php" ?>
 
 <body>
-  <?php include "../includes/header.php"; 
-  $active_li_signup = "active"?>
+  <?php 
+  $active_li_signup = 'active';
+  include "../includes/header.php"; 
+  ?>
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">

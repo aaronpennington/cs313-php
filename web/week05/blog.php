@@ -16,7 +16,7 @@ include "../includes/links.php" ?>
 
 <body>
   <?php 
-  $active_li_post = "active";
+  $active_li_post = 'active';
   include "../includes/header.php"; ?>
 
   <div class="container">

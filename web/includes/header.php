@@ -36,7 +36,7 @@
               }
               else {
                 echo '<a class="nav-link" href="../week05/login.php">Login</a></li>';
-                echo '<li class="nav-item "'. if (isset($active_li_signup) {$active_li_signup} .'><a class="nav-link" href="../week05/signup.php">Sign Up</a></li>';
+                echo '<li class="nav-item"'><a class="nav-link" href="../week05/signup.php">Sign Up</a></li>';
               }
             ?>
         </ul>
