@@ -50,7 +50,7 @@ function editPost() {
   $("#post_div").prepend(edit_text);
 
   var br = document.createElement("br");
-  br.setAttribute("id", "edit_br");
+  br.setAttribute("class", "edit_br");
   $("#post_div").prepend(br);
 
   var edit_subtitle = document.createElement("input");
@@ -60,7 +60,7 @@ function editPost() {
   $("#post_div").prepend(edit_subtitle);
 
   var br2 = document.createElement("br");
-  br2.setAttribute("id", "edit_br");
+  br2.setAttribute("class", "edit_br");
   $("#post_div").prepend(br2);
 
   var edit_title = document.createElement("input");
@@ -103,7 +103,7 @@ function submitEditPost() {
       $("#post_subtitle").remove();
       $("#post_text").remove();
       $("#submit_edit_btn").remove();
-      $("#edit_br").remove();
+      $(".edit_br").removeAll();
 
       var new_text = document.createElement("p");
       new_text.setAttribute("id", "post_text");
