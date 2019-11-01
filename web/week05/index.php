@@ -12,7 +12,7 @@
   <?php include "../includes/header.php"; ?>
 
   <div class="container">
-    <h1> Archives </h1>
+    <h1>Archives </h1>
     <p>Select all posts from a user:</p>
     <form id="userSelectForm" onchange="submitFormData()" method="post">
       <select id="userList">
