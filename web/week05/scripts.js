@@ -124,5 +124,9 @@ function submitEditPost() {
 }
 
 function deletePost() {
-  $.post("submit_delete_post.php");
+  $.post("submit_delete_post.php", {},
+    function (data) {
+      console.log("Post deleted");
+      location.href = "index.php";
+    });
 }

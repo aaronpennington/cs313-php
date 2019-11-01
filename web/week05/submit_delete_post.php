@@ -11,7 +11,6 @@
     $statement = $db->prepare($query);
     $statement->bindValue(':post_id', $post_id);
     $statement->execute();
-  
   }
   catch (Exception $ex)
   {
