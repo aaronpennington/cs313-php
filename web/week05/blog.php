@@ -15,7 +15,9 @@ include "../includes/links.php" ?>
 <html lang="en">
 
 <body>
-  <?php include "../includes/header.php"; ?>
+  <?php 
+  $active_li_post = "active";
+  include "../includes/header.php"; ?>
 
   <div class="container">
     <form action="../week05/insert.php" method="POST">

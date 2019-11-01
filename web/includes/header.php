@@ -2,7 +2,7 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1>Susan Bush</h1>
-      <p>Susan is a teacher for VIP Kids</p>
+      <p>Susan is a teacher for VIPKID</p>
     </div>
   </div>
 
@@ -26,17 +26,17 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?php if (isset($active_li_post) {echo $active_li_post} ?>">
             <a class="nav-link" href="../week05/blog.php">Make Post</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?php if (isset($active_li_login) {echo $active_li_login} ?>">
             <?php 
               if (isset($_SESSION["user_id"])) {
                 echo '<a class="nav-link" href="../week05/logout.php">Logout</a></li>';
               }
               else {
                 echo '<a class="nav-link" href="../week05/login.php">Login</a></li>';
-                echo '<li class="nav-item"><a class="nav-link" href="../week05/signup.php">Sign Up</a></li>';
+                echo '<li class="nav-item "'. if (isset($active_li_signup) {$active_li_signup} .'><a class="nav-link" href="../week05/signup.php">Sign Up</a></li>';
               }
             ?>
         </ul>

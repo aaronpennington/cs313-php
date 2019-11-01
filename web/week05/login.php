@@ -5,7 +5,9 @@ include "../includes/links.php";
 ?>
 
 <body>
-  <?php include "../includes/header.php"; ?>
+  <?php $active_li_login = "active";
+  include "../includes/header.php"; 
+  ?>
   <div class="container">
     <?php 
       if (! empty($_GET )){
