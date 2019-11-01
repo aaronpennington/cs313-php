@@ -49,7 +49,9 @@ function editPost() {
   edit_text.setAttribute("cols", "75");
   $("#post_div").prepend(edit_text);
 
-  $("#post_div").prepend(document.createElement("br"));
+  var br = document.createElement("br");
+  br.setAttribute("id", "edit_br");
+  $("#post_div").prepend(br);
 
   var edit_subtitle = document.createElement("input");
   edit_subtitle.setAttribute("type", "text");
@@ -57,7 +59,9 @@ function editPost() {
   edit_subtitle.setAttribute("id", "post_subtitle");
   $("#post_div").prepend(edit_subtitle);
 
-  $("#post_div").prepend(document.createElement("br"));
+  var br2 = document.createElement("br");
+  br2.setAttribute("id", "edit_br");
+  $("#post_div").prepend(br2);
 
   var edit_title = document.createElement("input");
   edit_title.setAttribute("type", "text");
@@ -99,21 +103,22 @@ function submitEditPost() {
       $("#post_subtitle").remove();
       $("#post_text").remove();
       $("#submit_edit_btn").remove();
+      $("#edit_br").remove();
 
-      var new_title = document.createElement("h1");
-      new_title.setAttribute("id", "post_title");
-      new_title.innerHTML = post_title;
-      $("#post_div").prepend(new_title);
+      var new_text = document.createElement("p");
+      new_text.setAttribute("id", "post_text");
+      new_text.innerHTML = post_text;
+      $("#post_div").prepend(new_text);
 
       var new_subtitle = document.createElement("h3");
       new_subtitle.setAttribute("id", "post_subtitle");
       new_subtitle.innerHTML = post_subtitle;
       $("#post_div").prepend(new_subtitle);
 
-      var new_text = document.createElement("p");
-      new_text.setAttribute("id", "post_text");
-      new_text.innerHTML = post_text;
-      $("#post_div").prepend(new_text);
+      var new_title = document.createElement("h1");
+      new_title.setAttribute("id", "post_title");
+      new_title.innerHTML = post_title;
+      $("#post_div").prepend(new_title);
     });
 }
 
