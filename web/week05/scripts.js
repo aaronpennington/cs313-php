@@ -39,6 +39,7 @@ function editPost() {
   var submit_edit_btn = document.createElement("button");
   submit_edit_btn.setAttribute("onclick", "submitEditPost()");
   submit_edit_btn.setAttribute("id", "submit_edit_btn");
+  submit_edit_btn.setAttribute("class", "btn btn-outline-primary");
   submit_edit_btn.innerHTML = "Submit Changes";
   $("#post_div").prepend(submit_edit_btn);
 
