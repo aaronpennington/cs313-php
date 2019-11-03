@@ -1,31 +1,3 @@
-INSERT INTO public.USER (username,
-                  password,
-                  display_name)
-        VALUES ('admin',
-        'password',
-        'Admin');
-
-INSERT INTO public.USER (username,
-                  password,
-                  display_name)
-        VALUES ('bestuser2019',
-        'jklqUEm1joqin43l1254',
-        'Tony S');
-
-INSERT INTO public.USER (username,
-                  password,
-                  display_name)
-        VALUES ('mjolnir',
-        'thund3r',
-        'Thor O');
-
-INSERT INTO public.USER (username,
-                  password,
-                  display_name)
-        VALUES ('susanb',
-        's3cur3 p4$$w0rd',
-        'Susan B');
-
 INSERT INTO public.POST (title, content, post_date, user_id)
         VALUES(
                 'What Is Lorem Ipsum?',
